@@ -1,16 +1,15 @@
 package code;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Scanner;
 
-
-public class StudentMember extends Member {
+/*
+ * The StudentMember class is a class that gets student id college and the packchoice
+ * 
+ *  @author Micheal Dunne.
+ *  @version 02/05/2017
+ */
+public class StudentMember extends Member<Object> {
 	private String packchoice;
 	private String studentId;
 	private String college;
@@ -22,11 +21,28 @@ public class StudentMember extends Member {
 	double calculateBMI;
 	String determineBMICategory;
 	String chosenPackage;
-	int startingWeight;
+	double weight;
+
+	/**
+	 * @return the weight
+	 */
+	public double getWeight() {
+		return weight;
+	}
+
+	/**
+	 * @param weight
+	 *            the weight to set
+	 */
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
 	double height;
-	public StudentMember(String author, String address, String email, String gender, double calculateBMI,
-			String determineBMICategory,String chosenPackage,int weight,double height) {
-		super(author, address, email, gender, calculateBMI, determineBMICategory,weight,height);
+
+	public StudentMember(String author, String address, String email, String gender, double weight, double height,
+			String studentId, String collegeName) {
+		super(author, address, email, gender, height, weight);
 		packchoice = chosenPackage;
 	}
 
@@ -38,7 +54,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param packchoice the packchoice to set
+	 * @param packchoice
+	 *            the packchoice to set
 	 */
 	public void setPackchoice(String packchoice) {
 		this.packchoice = packchoice;
@@ -52,7 +69,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param studentId the studentId to set
+	 * @param studentId
+	 *            the studentId to set
 	 */
 	public void setStudentId(String studentId) {
 		this.studentId = studentId;
@@ -66,7 +84,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param college the college to set
+	 * @param college
+	 *            the college to set
 	 */
 	public void setCollege(String college) {
 		this.college = college;
@@ -80,7 +99,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param ch the ch to set
+	 * @param ch
+	 *            the ch to set
 	 */
 	public void setCh(int ch) {
 		this.ch = ch;
@@ -94,7 +114,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param author the author to set
+	 * @param author
+	 *            the author to set
 	 */
 	public void setAuthor(String author) {
 		this.author = author;
@@ -108,7 +129,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param address the address to set
+	 * @param address
+	 *            the address to set
 	 */
 	public void setAddress(String address) {
 		this.address = address;
@@ -122,7 +144,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param email the email to set
+	 * @param email
+	 *            the email to set
 	 */
 	public void setEmail(String email) {
 		this.email = email;
@@ -136,7 +159,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param gender the gender to set
+	 * @param gender
+	 *            the gender to set
 	 */
 	public void setGender(String gender) {
 		this.gender = gender;
@@ -150,7 +174,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param calculateBMI the calculateBMI to set
+	 * @param calculateBMI
+	 *            the calculateBMI to set
 	 */
 	public void setCalculateBMI(double calculateBMI) {
 		this.calculateBMI = calculateBMI;
@@ -164,7 +189,8 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param determineBMICategory the determineBMICategory to set
+	 * @param determineBMICategory
+	 *            the determineBMICategory to set
 	 */
 	public void setDetermineBMICategory(String determineBMICategory) {
 		this.determineBMICategory = determineBMICategory;
@@ -178,24 +204,11 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param chosenPackage the chosenPackage to set
+	 * @param chosenPackage
+	 *            the chosenPackage to set
 	 */
 	public void setChosenPackage(String chosenPackage) {
 		this.chosenPackage = chosenPackage;
-	}
-
-	/**
-	 * @return the startingWeight
-	 */
-	public int getStartingWeight() {
-		return startingWeight;
-	}
-
-	/**
-	 * @param startingWeight the startingWeight to set
-	 */
-	public void setStartingWeight(int startingWeight) {
-		this.startingWeight = startingWeight;
 	}
 
 	/**
@@ -206,13 +219,14 @@ public class StudentMember extends Member {
 	}
 
 	/**
-	 * @param height the height to set
+	 * @param height
+	 *            the height to set
 	 */
 	public void setHeight(double height) {
 		this.height = height;
 	}
 
-	public void setAssessments(HashMap<Date, Assessment> assessments) {
+	public void setAssessments(HashMap<Date, Assessment> assessments, HashMap<java.sql.Date, Object> Assessment) {
 		// TODO Auto-generated method stub
 		this.Assessment = Assessment;
 	}

@@ -1,20 +1,24 @@
 package code;
 
-import java.util.Scanner;
+/*
+/ * The PremiumMember class is a is where you determine the chosen package. 
+ * 
+ *  @author Micheal Dunne.
+ *  @version 02/05/2017
+ */
 
 public class PremiumMember extends Member {
-	private String packchoice;
 
-	public PremiumMember(String author, String address, String email, String gender, int calculateBMI,
-			String determineBMICategory,String chosenPackage) 
-	{
-		super(author, address, email, gender, calculateBMI, determineBMICategory, calculateBMI, calculateBMI);
-		packchoice = chosenPackage;
-		// TODO Auto-generated constructor stub
+	public PremiumMember(String author, String address, String email, String gender, double weight, double height,
+			int chosenPackage) {
+		super(author, address, email, gender, weight, height);
 	}
-	public String toString(){
-		String output = "Your chosen package is " + packchoice;
+
+	int chosenPackage;
+
+	public String toString() {
+		String output = "Your chosen package is " + chosenPackage;
 		return output;
-		
+
 	}
 }

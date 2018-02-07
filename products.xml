@@ -1,0 +1,16 @@
+<object-stream>
+  <list>
+    <code.StudentMember>
+      <internet>ownin</internet>
+      <location>micheal</location>
+      <gen>Male</gen>
+      <name></name>
+      <weight defined-in="code.Member">0</weight>
+      <height defined-in="code.Member">0.0</height>
+      <ch>0</ch>
+      <calculateBMI>0.0</calculateBMI>
+      <weight>0.0</weight>
+      <height>0.0</height>
+    </code.StudentMember>
+  </list>
+</object-stream>

@@ -3,23 +3,34 @@ package code;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+ * The Assessment class is a is where you get the chest upper arm, thigh,
+ * hip,waist,weight,comments and your trainer 
+ * 
+ *  @author Micheal Dunne.
+ *  @version 02/05/2017
+ */
 public class Assessment {
 	private double chest;
 	private double upperArm;
 	private double thigh;
-	private double hip; 
+	private double hip;
 	private double waist;
 	private double weight;
 	private String comment;
-	private Trainer trainer;	
-	
-	public Assessment(double chest,double upperArm,double thigh,double hip,double waist,double weight,String comment,Trainer trainer){
+	private Trainer trainer;
+	private int height;
+
+	/*
+	 * This Gets all of the inputs stores them while it sets them up as well
+	 */
+	public Assessment(double chest, double upperArm, double thigh, double hip, double waist, double weight,
+			String comment, Trainer trainer) {
 		this.setChest(chest);
 		this.setUpperArm(upperArm);
 		this.setThigh(thigh);
 		this.setHip(hip);
 		this.setWaist(waist);
-		this.setWeight(weight);
 		this.setComment(comment);
 		this.setTrainer(trainer);
 	}
@@ -31,8 +42,13 @@ public class Assessment {
 		return chest;
 	}
 
+	public int getHeight() {
+		return height;
+	}
+
 	/**
-	 * @param chest the chest to set
+	 * @param chest
+	 *            the chest to set
 	 */
 	public void setChest(double chest) {
 		this.chest = chest;
@@ -46,7 +62,8 @@ public class Assessment {
 	}
 
 	/**
-	 * @param upperArm the upperArm to set
+	 * @param upperArm
+	 *            the upperArm to set
 	 */
 	public void setUpperArm(double upperArm) {
 		this.upperArm = upperArm;
@@ -60,7 +77,8 @@ public class Assessment {
 	}
 
 	/**
-	 * @param thigh the thigh to set
+	 * @param thigh
+	 *            the thigh to set
 	 */
 	public void setThigh(double thigh) {
 		this.thigh = thigh;
@@ -74,7 +92,8 @@ public class Assessment {
 	}
 
 	/**
-	 * @param hip the hip to set
+	 * @param hip
+	 *            the hip to set
 	 */
 	public void setHip(double hip) {
 		this.hip = hip;
@@ -88,7 +107,8 @@ public class Assessment {
 	}
 
 	/**
-	 * @param waist the waist to set
+	 * @param waist
+	 *            the waist to set
 	 */
 	public void setWaist(double waist) {
 		this.waist = waist;
@@ -102,7 +122,8 @@ public class Assessment {
 	}
 
 	/**
-	 * @param weight the weight to set
+	 * @param weight
+	 *            the weight to set
 	 */
 	public void setWeight(double weight) {
 		this.weight = weight;
@@ -116,7 +137,8 @@ public class Assessment {
 	}
 
 	/**
-	 * @param comment the comment to set
+	 * @param comment
+	 *            the comment to set
 	 */
 	public void setComment(String comment) {
 		this.comment = comment;
@@ -130,7 +152,8 @@ public class Assessment {
 	}
 
 	/**
-	 * @param trainer the trainer to set
+	 * @param trainer
+	 *            the trainer to set
 	 */
 	public void setTrainer(Trainer trainer) {
 		this.trainer = trainer;
